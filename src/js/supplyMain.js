@@ -798,3 +798,29 @@ document.addEventListener('click', (e) => {
         cyberAudio.playClick();
     }
 });
+
+// ── PWA Installation Logic ──────────────────────────────────
+let deferredPrompt;
+const btnInstall = document.getElementById('btn-install');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (btnInstall) btnInstall.hidden = false;
+});
+
+if (btnInstall) {
+    btnInstall.addEventListener('click', async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        btnInstall.hidden = true;
+    });
+}
+
+window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    if (btnInstall) btnInstall.hidden = true;
+    showToast('🚀 App installed successfully!', 'success');
+});

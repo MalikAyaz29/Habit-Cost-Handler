@@ -3,7 +3,7 @@
 //  Cache-first strategy for static assets
 // ============================================================
 
-const CACHE_NAME = 'habit-cost-v5';
+const CACHE_NAME = 'habit-cost-v6';
 const ASSETS = [
   './',
   './index.html',
