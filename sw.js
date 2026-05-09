@@ -3,7 +3,7 @@
 //  Cache-first strategy for static assets
 // ============================================================
 
-const CACHE_NAME = 'habit-cost-v6';
+const CACHE_NAME = 'habit-cost-v7';
 const ASSETS = [
   './',
   './index.html',
@@ -20,6 +20,8 @@ const ASSETS = [
   './src/js/validator.js',
   './src/js/audio.js',
   './src/js/sharedCurrency.js',
+  './src/icons/icon-192.png',
+  './src/icons/icon-512.png',
 ];
 
 // Install — cache core assets
