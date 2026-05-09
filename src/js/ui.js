@@ -174,6 +174,9 @@ export function renderHabitCards(container, habits) {
     `;
 
     container.innerHTML = html;
+    
+    // Trigger animations for the newly rendered cards so they don't stay hidden
+    setTimeout(() => triggerEntranceAnimations(), 50);
 }
 
 // ── RESULTS PANEL ───────────────────────────────────────────
