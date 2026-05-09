@@ -1491,7 +1491,7 @@
 
 /* ── 12b. Mobile Breakpoint (≤600px) ─────────────────────── */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .supply-main {
         padding: 0 12px calc(80px + env(safe-area-inset-bottom, 0px));
     }
