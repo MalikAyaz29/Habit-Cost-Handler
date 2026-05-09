@@ -1502,10 +1502,19 @@ button, .nav-link, .preset-chip, .share-btn {
     }
 
     .header-top {
-        flex-wrap: wrap;
-        gap: 8px;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
         justify-content: center;
         width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .header-controls {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
     }
 
     .warning-banner {
@@ -1953,9 +1962,8 @@ button, .nav-link, .preset-chip, .share-btn {
         right: 16px;
     }
 
-    /* Toast above bottom nav */
     .toast {
-        bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+        bottom: calc(100px + env(safe-area-inset-bottom, 0px)) !important;
     }
 }
 
